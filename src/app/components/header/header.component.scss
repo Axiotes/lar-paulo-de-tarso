@@ -6,7 +6,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: aqua;
+        background-color: #f5f5f5;
 
         &__nav {
             margin-right: 2%;
@@ -14,13 +14,34 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             align-items: center;
+            gap: 15px;
+            margin-left: 85px;
 
             &-item {
                 color: black;
                 font-weight: 500;
             }
 
+            &-donation {
+                color: black;
+                background-color: #57F421;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+                width: 130px;
+                border-radius: 30px;
+                gap: 5px;
+            }
+
         }
+    }
+
+    .selected-option {
+        text-decoration: underline 2px;
+        text-decoration-color: black;
+        text-underline-offset: 3px;
     }
 
 
@@ -31,8 +52,9 @@
 
     .menu { display: none; }
     .logo-mobile { display: none; }
+    .mat-toolbar { display: none; }
 
-    @media screen and (max-width: 599px) {
+    @media screen and (max-width: 769px) {
         .header__desktop {
             display: none;
         }
@@ -61,7 +83,7 @@
                     align-items: center;
                     justify-items: center;
                     background-color: #57F421;
-                    border-radius: 20px;
+                    border-radius: 30px;
                     padding: 5px;
                 }
             }
