@@ -1,0 +1,45 @@
+<header class="header">
+    <div class="header__desktop">
+        <img src="assets/icons/logo-ong.png" class="logo-desktop">
+
+        <nav class="header__desktop__nav">
+            <a routerLink="/home" class="header__desktop__nav-item">Início</a>
+            <a routerLink="/about-us" class="header__desktop__nav-item">Sobre</a>
+            <a routerLink="/news" class="header__desktop__nav-item">Notícias</a>
+            <a routerLink="/ethical-values" class="header__desktop__nav-item">Valores</a>
+            <a routerLink="/contact" class="header__desktop__nav-item">Contatos</a>
+            <a routerLink="/donations" class="header__desktop__nav-donation">
+                <img src="assets/icons/mao.png" width="25px">
+                Doe agora
+            </a>
+        </nav>
+    </div>
+
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav mode="side" opened="false">
+        <mat-nav-list class="sidenav-container__list" (click)="sidenav.toggle()">
+            <a routerLink="/home" class="sidenav-container__list-item">Início</a>
+            <a routerLink="/about-us" class="sidenav-container__list-item">Sobre</a>
+            <a routerLink="/news" class="sidenav-container__list-item">Notícias</a>
+            <a routerLink="/ethical-values" class="sidenav-container__list-item">Valores</a>
+            <a routerLink="/contact" class="sidenav-container__list-item">Contatos</a>
+            <a routerLink="/donations" class="sidenav-container__list-donation">
+                <img src="assets/icons/mao.png" width="25px">
+                Doe agora
+            </a>
+          </mat-nav-list>
+        </mat-sidenav>
+  
+        <mat-sidenav-content>
+        <mat-toolbar>
+            <img src="assets/icons/logo-ong.png" class="logo-mobile">
+
+            <button mat-icon-button (click)="sidenav.toggle()" class="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</header>
+  
