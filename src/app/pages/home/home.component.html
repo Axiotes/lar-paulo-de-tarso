@@ -3,10 +3,10 @@
         <h1 class="home__image-title">Reconstruindo vidas com <strong>amor</strong></h1>
 
         <div class="home__image__btn">
-            <a routerLink="/donations" class="home__image__btn-donation">
+            <a routerLink="/donations" class="home__image__btn-donation" (click)="chanceActiveRoute('/donations')">
                 Faça sua doação
             </a>
-            <a routerLink="/about-us" class="home__image__btn-about">
+            <a routerLink="/about-us" class="home__image__btn-about" (click)="chanceActiveRoute('/about-us')">
                 Conheça nosso Lar
             </a>
         </div>
