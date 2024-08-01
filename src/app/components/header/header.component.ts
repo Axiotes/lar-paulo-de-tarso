@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list'
 import { RouterOutlet, RouterLink, Router, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ConnectComponentsService } from '../../services/connect-components.service';
 
 @Component({
   selector: 'app-header',
@@ -34,14 +35,17 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private connectComponents: ConnectComponentsService,
+  ) { 
+    this.connectComponents.getActiveRoute().subscribe((route) => this.chanceActiveRoute(route));
+  }
 
   ngOnInit(): void {
     this.chanceActiveRoute("/home");
   }
 
-  public chanceActiveRoute(route: string) {
+  public chanceActiveRoute(route: string): void {
     this.navOptions.filter((option) => option.route === route).map((option) => option.isActive = true);
     this.navOptions.filter((option) => option.route !== route).map((option) => option.isActive = false);
   }
