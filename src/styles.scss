@@ -3,6 +3,8 @@
     padding: 0;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
