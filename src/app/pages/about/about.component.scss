@@ -6,14 +6,39 @@
     gap: 25px;
     margin: 10% 8% 10% 8%;
 
+    @media screen and (min-width: 699px) {
+        flex-direction: row-reverse;
+        gap: 60px;
+        margin: 0 8% 0 8%;
+        height: 90vh;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
+        height: 100%;
+
+        @media screen and (min-width: 699px) {
+            height: 100%;
+
+            &-logo {
+                position: absolute;
+                top: 10%;
+                left: 50%;
+
+                @media screen and (min-width: 699px) and (max-width: 769px) {
+                    top: 20%;
+                    left: 40%;
+                }
+            }
+        }
 
         &__text {
+            height: 100%;
+
             p {
                 text-align: justify;
             }
@@ -22,6 +47,13 @@
 
     &__image {
         border-radius: 70px;
+        width: 100%;
+
+        @media screen and (min-width: 699px) {
+            max-width: 400px;
+            min-width: 260px;
+            min-height: 330px;
+        }
     }
 }
 
