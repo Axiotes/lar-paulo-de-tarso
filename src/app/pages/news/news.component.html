@@ -1,1 +1,9 @@
-<p>news works!</p>
+<main class="container">
+    <h1 class="container__title">Últimas <strong>notícias</strong></h1>
+
+    <div class="container__news">
+        <div *ngFor="let new of news">
+            <app-card-new [url]="new.url" [message]="new.message"></app-card-new>
+        </div>
+    </div>
+</main>
