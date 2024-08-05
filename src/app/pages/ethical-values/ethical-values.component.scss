@@ -5,6 +5,10 @@
     justify-content: center;
     height: 80%;
 
+    @media screen and (min-width: 769px) {
+        height: 88vh;
+    }
+
     &__title {
         color: #67AC51;
         text-align: center;
