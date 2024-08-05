@@ -14,13 +14,13 @@
 
         &-title {
             position: relative;
-            left: 5%;
             bottom: 15%;
             color: white;
             font-weight: 500;
             font-size: 2.2em;
             text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
             overflow: visible;
+            padding-left: 5%;
 
             @media screen and (min-width: 769px) {
                 font-size: 2.8em;
@@ -34,10 +34,10 @@
             flex-wrap: wrap;
             gap: 20px;
             overflow: visible;
+            padding-left: 5%;
 
             position: relative;
             bottom: 15%;
-            left: 5%;
 
             @media screen and (min-width: 769px) {
                 gap: 40px;

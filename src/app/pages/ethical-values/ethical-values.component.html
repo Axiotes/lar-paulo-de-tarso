@@ -1,1 +1,11 @@
-<p>ethical-values works!</p>
+<main class="container">
+    <h1 class="container__title">Valoes <strong>éticos</strong></h1>
+
+    <div class="container__values">
+        <div *ngFor="let value of values">
+            <app-card-values [url]="value.url"
+            [title]="value.title" 
+            [message]="value.message"></app-card-values>
+        </div>
+    </div>
+</main>
