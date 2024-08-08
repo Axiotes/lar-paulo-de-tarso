@@ -1,1 +1,36 @@
-<p>contact works!</p>
+<main class="container">
+    <div class="container__first-image">
+        <img src="/assets/images/contact01.png">
+    </div>
+    <div class="container__contacts">
+        <div class="container__contacts__us">
+            <h1 class="container__contacts__us-title"><strong>Fale conosco</strong></h1>
+
+            <div class="container__contacts__us-social">
+                <div *ngFor="let medias of socialMedias">
+                    <app-social-medias [url]="medias"></app-social-medias>
+                </div>
+            </div>
+        </div>
+        <div class="container__contacts__location">
+            <h1 class="container__contacts__location-title"><strong>Onde nos encontrar</strong></h1>
+
+            <div class="container__contacts-location__infos">
+                <div class="container__contacts-location__infos-address">
+                    <img src="" class="container__contacts__location__infos-address--icon">
+                    <p class="container__contacts__location__infos-address--text">Rua Ribeiro Martins, 288, Hipódromo Recife-PE</p>
+                </div>
+
+                <img src="/assets/images/location.png" class="container__contacts__location__infos-maps">
+            </div>
+        </div>
+    </div>
+    <div class="container__donation">
+        <p class="container__donation-text">Nos ajude a continuar transformando vidas</p>
+
+        <a class="container__donation-btn">
+            <img src="assets/icons/mao.png" width="25px">
+            Doe agora
+        </a>
+    </div>
+</main>
