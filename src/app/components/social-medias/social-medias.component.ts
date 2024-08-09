@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SocialMediasComponent {
   @Input({ required: true }) public url: string = "";
+  @Input({ required: true }) public socialMedia: string = "";
 }
