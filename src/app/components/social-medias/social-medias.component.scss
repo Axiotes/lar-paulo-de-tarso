@@ -1,0 +1,14 @@
+.social-medias {
+    width: 40px;
+    height: 40px;
+    border: solid 2px black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        width: 100%;
+        max-width: 25px;
+    }
+}

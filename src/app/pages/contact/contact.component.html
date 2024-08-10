@@ -1,1 +1,43 @@
-<p>contact works!</p>
+<main class="container">
+    <div class="container__first-image">
+        <img src="/assets/images/contact01.png">
+    </div>
+    <div class="container__contacts">
+        <div class="container__contacts__us">
+            <h1 class="container__contacts__us-title"><strong>Fale conosco</strong></h1>
+
+            <div class="container__contacts__us-social">
+                <div *ngFor="let medias of socialMedias">
+                    <app-social-medias [socialMedia]="medias.socialMedia" [url]="medias.url"></app-social-medias>
+                </div>
+            </div>
+        </div>
+        <div class="container__contacts__location">
+            <div class="container__contacts__location-loc">
+                <h1 class="container__contacts__location-title"><strong>Onde nos encontrar</strong></h1>
+                <div class="container__contacts__location__infos-address">
+                    <img src="/assets/icons/localizacao.png" class="container__contacts__location__infos-address--icon">
+                    <p class="container__contacts__location__infos-address--text">Rua Ribeiro Martins, 288, Hipódromo Recife-PE</p>
+                </div>
+            </div>
+
+            <div class="container__contacts__location__infos">
+                <a 
+                href="https://www.google.com.br/maps/place/R.+Martins+Ribeiro,+288+-+Hip%C3%B3dromo,+Recife+-+PE,
+                +52041-720/@-8.0333488,-34.8870363,18z/data=!4m6!3m5!1s0x7ab185e0ab051c1:0xfbb920990347f9ca!8m2!
+                3d-8.0333392!4d-34.8858203!16s%2Fg%2F11crwpt97b?entry=ttu"
+                target="_blank">
+                    <img src="/assets/images/location.png" class="container__contacts__location__infos-maps">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container__donation">
+        <p class="container__donation-text">Nos ajude a continuar transformando vidas</p>
+
+        <a class="container__donation-btn" routerLink="/donations" (click)="chanceActiveRoute('/donations')">
+            <img src="assets/icons/mao.png" width="25px">
+            Doe agora
+        </a>
+    </div>
+</main>
