@@ -1,1 +1,50 @@
-<p>type-donation works!</p>
+<main class="container" *ngIf="typeDonation !== '/money'">
+  <h1 class="container__title">FAÇA SUA <strong>DOAÇÃO</strong></h1>
+
+  <div class="container__donation">
+    <div class="container__donation__type">
+      <img src="{{ url }}" class="container__donation__type-image" />
+      <h2 class="container__donation__type-subtitle">
+        O que você deseja <strong>doar</strong> {{ textDonation }}?
+      </h2>
+    </div>
+
+    <div class="container__donation__infos">
+      <div class="container__donation__describe">
+        <p class="text">Descreva um pouco sua doação:</p>
+        <textarea class="container__donation__describe-textarea"></textarea>
+      </div>
+
+      <div class="container__donation__infos__visit">
+        <div class="container__donation__infos__visit-day">
+          <p class="text">Marque um dia:</p>
+          <mat-form-field class="mat-form-field">
+            <mat-label>Escolha uma data</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              (input)="formatDate($event)"
+              maxlength="10"
+            />
+            <mat-hint>MÊS/DIA/ANO</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker class="date-picker" #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="container__donation__infos__visit-hour">
+          <p class="text">Marque um horário:</p>
+          <input type="text" (input)="formatHour($event)" maxlength="5" />
+        </div>
+      </div>
+
+      <button class="container__donation__infos-btn">
+        Concluir doação
+        <img src="/assets/icons/sorriso.png" />
+      </button>
+    </div>
+  </div>
+</main>

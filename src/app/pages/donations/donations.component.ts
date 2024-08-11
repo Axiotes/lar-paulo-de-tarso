@@ -13,26 +13,31 @@ import { OptionDonationComponent } from '../../components/option-donation/option
   styleUrl: './donations.component.scss'
 })
 export class DonationsComponent {
-  public optionsDonations: { url: string, text: string }[] = [
+  public optionsDonations: { url: string, text: string, route: string }[] = [
     { 
       url: "/assets/icons/alimento.png",
-      text: "Alimentos"
+      text: "Alimentos",
+      route: "/foods"
     },
     { 
       url: "/assets/icons/roupas.png",
-      text: "Roupas"
+      text: "Roupas",
+      route: "/clothes"
     },
     { 
       url: "/assets/icons/brinquedos.png",
-      text: "Brinquedos"
+      text: "Brinquedos",
+      route: "/toys"
     },
     { 
       url: "/assets/icons/dinheiro.png",
-      text: "Dinheiro"
+      text: "Dinheiro",
+      route: "/money"
     },
     { 
       url: "/assets/icons/outros.png",
-      text: "Outros"
+      text: "Outros",
+      route: "/others"
     },
   ];
 }

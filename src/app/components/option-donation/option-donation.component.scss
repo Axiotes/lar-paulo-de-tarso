@@ -8,10 +8,6 @@
     &-image {
         width: 100%;
         max-width: 60px;
-
-        @media screen and (min-width: 769px) {
-            min-width: 85px;
-        }
     }
 
     &-btn {
@@ -23,11 +19,5 @@
         color: #67AC51;
         font-weight: 700;
         cursor: pointer;
-
-        @media screen and (min-width: 769px) {
-            height: 45px;
-            width: 130px;
-            font-size: 1.2em;
-        }
     }
 }
