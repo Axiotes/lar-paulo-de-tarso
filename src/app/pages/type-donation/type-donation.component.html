@@ -1,22 +1,50 @@
-<main class="container" *ngIf="typeDonation !== '/money'">
+<main class="container">
   <h1 class="container__title">FAÇA SUA <strong>DOAÇÃO</strong></h1>
 
   <div class="container__donation">
     <div class="container__donation__type">
       <img src="{{ url }}" class="container__donation__type-image" />
-      <h2 class="container__donation__type-subtitle">
+      <h2
+        class="container__donation__type-subtitle"
+        *ngIf="typeDonation !== '/money'"
+      >
         O que você deseja <strong>doar</strong> {{ textDonation }}?
+      </h2>
+      <h2
+        class="container__donation__type-subtitle"
+        *ngIf="typeDonation === '/money'"
+        style="font-size: 1.8em"
+      >
+        <strong>{{ textDonation }}</strong>
       </h2>
     </div>
 
     <div class="container__donation__infos">
-      <div class="container__donation__describe">
+      <div
+        class="container__donation__describe"
+        *ngIf="typeDonation !== '/money'"
+      >
         <p class="text">Descreva um pouco sua doação:</p>
         <textarea class="container__donation__describe-textarea"></textarea>
       </div>
+      <div
+        class="container__donation__describe"
+        *ngIf="typeDonation === '/money'"
+      >
+        <p class="text">Digite a quantia que deseje doar:</p>
+        <input
+          type="text"
+          class="container__donation__describe-input"
+          (input)="formatValue($event)"
+          value="R$ 0,00"
+        />
+      </div>
 
       <div class="container__donation__infos__visit">
-        <div class="container__donation__infos__visit-day">
+        <div
+          class="container__donation__infos__visit-day"
+          *ngIf="typeDonation !== '/money'"
+        >
           <p class="text">Marque um dia:</p>
           <mat-form-field class="mat-form-field">
             <mat-label>Escolha uma data</mat-label>
@@ -35,9 +63,34 @@
           </mat-form-field>
         </div>
 
-        <div class="container__donation__infos__visit-hour">
+        <div
+          class="container__donation__infos__visit-hour"
+          *ngIf="typeDonation !== '/money'"
+        >
           <p class="text">Marque um horário:</p>
           <input type="text" (input)="formatHour($event)" maxlength="5" />
+        </div>
+      </div>
+
+      <div
+        class="container__donation__infos__pay"
+        *ngIf="typeDonation === '/money'"
+      >
+        <div class="container__donation__infos__pay-user">
+          <p class="text">Nome:</p>
+          <input type="text" />
+        </div>
+        <div class="container__donation__infos__pay-user">
+          <p class="text">CPF:</p>
+          <input type="text" (input)="formatCpf($event)" maxlength="14" />
+        </div>
+        <div class="container__donation__infos__pay-user">
+          <p class="text">Número do cartão:</p>
+          <input type="text" (input)="formatCardNumber($event)" maxlength="19" />
+        </div>
+        <div class="container__donation__infos__pay-user">
+          <p class="text">CVV:</p>
+          <input type="text" maxlength="3" />
         </div>
       </div>
 

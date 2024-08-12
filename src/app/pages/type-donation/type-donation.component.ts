@@ -25,6 +25,9 @@ export class TypeDonationComponent implements OnInit {
   public textDonation: string = '';
   public formattedDate: string = '';
   public formattedHour: string = '';
+  public formattedValue: string = '';
+  public formattedCpf: string = '';
+  public formattedCardNumber: string = '';
 
   public types: { url: string; text: string; route: string }[] = [
     {
@@ -42,10 +45,10 @@ export class TypeDonationComponent implements OnInit {
       text: 'de brinquedos',
       route: '/toys',
     },
-    { 
-      url: "/assets/icons/dinheiro.png",
-      text: "Pagamento",
-      route: "/money"
+    {
+      url: '/assets/icons/dinheiro.png',
+      text: 'Pagamento',
+      route: '/money',
     },
     {
       url: '/assets/icons/outros.png',
@@ -86,16 +89,57 @@ export class TypeDonationComponent implements OnInit {
 
   public formatHour(event: Event) {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    let value = input.value.replace(/\D/g, '');
 
     if (value.length > 2) {
-      value = `${value.slice(0, 2)}:${value.slice(2, 4)}`; // Adiciona ':' após os dois primeiros caracteres e limita a 4 dígitos
-    } else if (value.length > 0) {
-      value = `${value.slice(0, 2)}`;
+      value = `${value.slice(0, 2)}:${value.slice(2, 4)}`;
     }
 
-    // Atualiza o valor do input sem apagar o texto existente
     input.value = value;
     this.formattedHour = value;
+  }
+
+  public formatValue(event: Event) {
+    const input = event.target as HTMLInputElement;
+    let value = input.value.replace(/\D/g, '');
+
+    if (value.length) {
+      value = (parseFloat(value) / 100).toFixed(2);
+      value = value.replace('.', ',');
+      value = `R$ ${value}`;
+    }
+
+    input.value = value;
+    this.formattedValue = value;
+  }
+
+  public formatCpf(event: Event) {
+    const input = event.target as HTMLInputElement;
+    let value = input.value.replace(/\D/g, '');
+
+    if (value.length > 3) {
+      value = value.slice(0, 3) + '.' + value.slice(3);
+    }
+    if (value.length > 6) {
+      value = value.slice(0, 7) + '.' + value.slice(7);
+    }
+    if (value.length > 9) {
+      value = value.slice(0, 11) + '-' + value.slice(11, 13);
+    }
+
+    input.value = value;
+    this.formattedCpf = value;
+  }
+
+  public formatCardNumber(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    let value = input.value.replace(/\D/g, '');
+
+    if (value.length > 4) {
+      value = value.match(/.{1,4}/g)?.join(' ') || value;
+    }
+
+    input.value = value;
+    this.formattedCardNumber = value;
   }
 }
