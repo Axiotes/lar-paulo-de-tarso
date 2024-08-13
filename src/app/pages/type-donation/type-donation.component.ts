@@ -7,6 +7,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../../components/modal/modal.component';
+import { Donations } from '../../types/donations.type';
 
 @Component({
   selector: 'app-type-donation',
@@ -32,7 +33,7 @@ export class TypeDonationComponent implements OnInit {
   public formattedCpf: string = '';
   public formattedCardNumber: string = '';
 
-  public types: { url: string; text: string; route: string }[] = [
+  public types: Donations[] = [
     {
       url: '/assets/icons/alimento.png',
       text: 'de alimentos',

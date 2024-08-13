@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OptionDonationComponent } from '../../components/option-donation/option-donation.component'; 
+import { Donations } from '../../types/donations.type';
 
 @Component({
   selector: 'app-donations',
@@ -13,7 +14,7 @@ import { OptionDonationComponent } from '../../components/option-donation/option
   styleUrl: './donations.component.scss'
 })
 export class DonationsComponent {
-  public optionsDonations: { url: string, text: string, route: string }[] = [
+  public optionsDonations: Donations[] = [
     { 
       url: "/assets/icons/alimento.png",
       text: "Alimentos",
