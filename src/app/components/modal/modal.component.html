@@ -1,0 +1,18 @@
+<div class="modal">
+  <p>
+    Este site é apenas um protótipo. Se você deseja fazer uma doação,
+    <a routerLink="/contact" (click)="close()">clique aqui</a> para acessar a
+    área de contatos e utilize os ícones das redes sociais para entrar em
+    contato com a ONG, ou
+    <a href="https://iclarpaulodetarso.org.br/v/" target="_blank"
+      >clique aqui</a
+    >
+    para visitar o site oficial.
+  </p>
+
+  <button class="modal__button" (click)="close()">Fechar</button>
+
+  <div class="modal__progress-container">
+    <div class="modal__progress-container__progress-bar" [ngStyle]="{ width: progress + '%' }"></div>
+</div>
+</div>

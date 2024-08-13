@@ -5,6 +5,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../../components/modal/modal.component';
 
 @Component({
   selector: 'app-type-donation',
@@ -15,6 +17,7 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatDatepickerModule,
     CommonModule,
+    ModalComponent,
   ],
   templateUrl: './type-donation.component.html',
   styleUrl: './type-donation.component.scss',
@@ -57,7 +60,7 @@ export class TypeDonationComponent implements OnInit {
     },
   ];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private matDialog: MatDialog) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((param) => {
@@ -141,5 +144,9 @@ export class TypeDonationComponent implements OnInit {
 
     input.value = value;
     this.formattedCardNumber = value;
+  }
+
+  public openModal(): void {
+    this.matDialog.open(ModalComponent);
   }
 }
