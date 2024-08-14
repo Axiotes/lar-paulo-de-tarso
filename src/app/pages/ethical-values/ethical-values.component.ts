@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardValuesComponent } from '../../components/card-values/card-values.component';
+import { EthicalValues } from '../../types/ethical-values.type';
 
 @Component({
   selector: 'app-ethical-values',
@@ -13,7 +14,7 @@ import { CardValuesComponent } from '../../components/card-values/card-values.co
   styleUrl: './ethical-values.component.scss'
 })
 export class EthicalValuesComponent {
-  public values: { url: string, title: string, message: string }[] = [
+  public values: EthicalValues[] = [
     { 
       url: "/assets/icons/value01.png",
       title: "Sim à vida desde a concepção",

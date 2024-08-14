@@ -3,7 +3,7 @@
 
     <div class="container__news">
         <div *ngFor="let new of news">
-            <app-card-new [url]="new.url" [message]="new.message"></app-card-new>
+            <app-card-new [url]="new.url" [message]="new.message" [readMore]="new.readMore"></app-card-new>
         </div>
     </div>
 </main>

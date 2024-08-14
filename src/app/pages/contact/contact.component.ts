@@ -3,6 +3,7 @@ import { SocialMediasComponent } from '../../components/social-medias/social-med
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ConnectComponentsService } from '../../services/connect-components.service';
+import { SocialMedias } from '../../types/social-medias.type';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,7 @@ import { ConnectComponentsService } from '../../services/connect-components.serv
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  public socialMedias: { socialMedia: string, url: string }[] = [
+  public socialMedias: SocialMedias[] = [
     {
       url: "/assets/icons/youtube.png",
       socialMedia: "https://www.youtube.com/@iclarpaulodetarso6542"
