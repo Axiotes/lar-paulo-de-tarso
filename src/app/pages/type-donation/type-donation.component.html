@@ -35,8 +35,9 @@
         <input
           type="text"
           class="container__donation__describe-input"
+          [value]="value | value"
           (input)="formatValue($event)"
-          value="R$ 0,00"
+          placeholder="R$ 0,00"
         />
       </div>
 
@@ -68,7 +69,7 @@
           *ngIf="typeDonation !== '/money'"
         >
           <p class="text">Marque um horário:</p>
-          <input type="text" (input)="formatHour($event)" maxlength="5" />
+          <input type="text" [value]="hour | hour" (input)="formatHour($event)" maxlength="5" />
         </div>
       </div>
 
@@ -78,23 +79,31 @@
       >
         <div class="container__donation__infos__pay-user">
           <p class="text">Nome:</p>
-          <input type="text" />
+          <input type="text" placeholder="Seu nome" />
         </div>
         <div class="container__donation__infos__pay-user">
           <p class="text">CPF:</p>
-          <input type="text" (input)="formatCpf($event)" maxlength="14" />
+          <input
+            type="text"
+            [value]="cpf | cpf"
+            (input)="formatCpf($event)"
+            placeholder="xxx.xxx.xxx-xx"
+            maxlength="14"
+          />
         </div>
         <div class="container__donation__infos__pay-user">
           <p class="text">Número do cartão:</p>
           <input
             type="text"
+            [value]="cardNumber | cardNumber"
             (input)="formatCardNumber($event)"
+            placeholder="xxxx xxxx xxxx xxxx"
             maxlength="19"
           />
         </div>
         <div class="container__donation__infos__pay-user">
           <p class="text">CVV:</p>
-          <input type="text" maxlength="3" />
+          <input type="text" maxlength="3" placeholder="xxx" />
         </div>
       </div>
 

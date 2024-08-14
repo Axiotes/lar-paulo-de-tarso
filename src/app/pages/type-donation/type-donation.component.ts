@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
@@ -8,6 +8,11 @@ import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../../components/modal/modal.component';
 import { Donations } from '../../types/donations.type';
+import { CpfPipe } from '../../pipes/cpf.pipe';
+import { ValuePipe } from '../../pipes/value.pipe';
+import { CardNumberPipe } from '../../pipes/card-number.pipe';
+import { DatePipe } from '../../pipes/date.pipe';
+import { HourPipe } from '../../pipes/hour.pipe';
 
 @Component({
   selector: 'app-type-donation',
@@ -19,6 +24,11 @@ import { Donations } from '../../types/donations.type';
     MatDatepickerModule,
     CommonModule,
     ModalComponent,
+    CpfPipe,
+    ValuePipe,
+    CardNumberPipe,
+    DatePipe,
+    HourPipe,
   ],
   templateUrl: './type-donation.component.html',
   styleUrl: './type-donation.component.scss',
@@ -27,11 +37,11 @@ export class TypeDonationComponent implements OnInit {
   public typeDonation: string | null = '';
   public url: string = '';
   public textDonation: string = '';
-  public formattedDate: string = '';
-  public formattedHour: string = '';
-  public formattedValue: string = '';
-  public formattedCpf: string = '';
-  public formattedCardNumber: string = '';
+  public hour: string = '';
+  public value: string = '';
+  public cpf: string = '';
+  public cardNumber: string = '';
+  public date: string = '';
 
   public types: Donations[] = [
     {
@@ -78,73 +88,45 @@ export class TypeDonationComponent implements OnInit {
 
   public formatDate(event: Event): void {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, '');
+    let date = input.value.replace(/\D/g, '');
 
-    if (value.length > 2) {
-      value = `${value.slice(0, 2)}/${value.slice(2)}`;
+    if (date.length > 2) {
+      date = `${date.slice(0, 2)}/${date.slice(2)}`;
     }
-    if (value.length > 5) {
-      value = `${value.slice(0, 5)}/${value.slice(5)}`;
+    if (date.length > 5) {
+      date = `${date.slice(0, 5)}/${date.slice(5)}`;
     }
 
-    input.value = value;
-    this.formattedDate = value;
+    input.value = date;
+    this.date = date;
   }
 
   public formatHour(event: Event) {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, '');
+    let hour = input.value.replace(/\D/g, '');
 
-    if (value.length > 2) {
-      value = `${value.slice(0, 2)}:${value.slice(2, 4)}`;
-    }
-
-    input.value = value;
-    this.formattedHour = value;
+    this.hour = hour;
   }
 
   public formatValue(event: Event) {
     const input = event.target as HTMLInputElement;
     let value = input.value.replace(/\D/g, '');
 
-    if (value.length) {
-      value = (parseFloat(value) / 100).toFixed(2);
-      value = value.replace('.', ',');
-      value = `R$ ${value}`;
-    }
-
-    input.value = value;
-    this.formattedValue = value;
+    this.value = value;
   }
 
   public formatCpf(event: Event) {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, '');
+    let cpf = input.value.replace(/\D/g, '');
 
-    if (value.length > 3) {
-      value = value.slice(0, 3) + '.' + value.slice(3);
-    }
-    if (value.length > 6) {
-      value = value.slice(0, 7) + '.' + value.slice(7);
-    }
-    if (value.length > 9) {
-      value = value.slice(0, 11) + '-' + value.slice(11, 13);
-    }
-
-    input.value = value;
-    this.formattedCpf = value;
+    this.cpf = cpf;
   }
 
   public formatCardNumber(event: Event): void {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, '');
+    let cardNumber = input.value.replace(/\D/g, '');
 
-    if (value.length > 4) {
-      value = value.match(/.{1,4}/g)?.join(' ') || value;
-    }
-
-    input.value = value;
-    this.formattedCardNumber = value;
+    this.cardNumber = cardNumber;
   }
 
   public openModal(): void {
