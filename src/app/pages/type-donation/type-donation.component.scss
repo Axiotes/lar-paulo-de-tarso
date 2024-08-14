@@ -149,21 +149,11 @@
         font-size: 14px;
         border-radius: 30px;
         background-color: #67ac51;
+        color: black;
 
         @media screen and (min-width: 1099px) {
           height: 50px;
           width: 180px;
-        }
-
-        img {
-          width: 100%;
-          max-width: 16px;
-
-          @media screen and (min-width: 1099px) {
-            width: 100%;
-            max-width: 23px;
-            margin-right: 10px;
-          }
         }
       }
 
@@ -179,7 +169,6 @@
           grid-template-columns: 1fr 1fr;
           align-items: center;
           justify-items: center;
-          
         }
 
         &-user {

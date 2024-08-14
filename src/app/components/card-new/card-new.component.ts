@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 export class CardNewComponent {
   @Input({ required: true }) public url: string = "";
   @Input({ required: true }) public message: string = "";
+  @Input({ required: true }) public readMore: string = "";
 }

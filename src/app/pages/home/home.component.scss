@@ -35,7 +35,6 @@
             gap: 20px;
             overflow: visible;
             padding-left: 5%;
-
             position: relative;
             bottom: 15%;
 
@@ -55,6 +54,7 @@
                 box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
                 font-size: 1em;
                 padding: 5px 10px 5px 10px;
+                color: black;
 
                 @media screen and (min-width: 769px) {
                     font-size: 1.2em;
@@ -73,6 +73,7 @@
                 box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
                 font-size: 1em;
                 padding: 5px 10px 5px 10px;
+                color: black;
 
                 @media screen and (min-width: 769px) {
                     font-size: 1.2em;

@@ -86,7 +86,11 @@
         </div>
         <div class="container__donation__infos__pay-user">
           <p class="text">Número do cartão:</p>
-          <input type="text" (input)="formatCardNumber($event)" maxlength="19" />
+          <input
+            type="text"
+            (input)="formatCardNumber($event)"
+            maxlength="19"
+          />
         </div>
         <div class="container__donation__infos__pay-user">
           <p class="text">CVV:</p>
@@ -96,7 +100,6 @@
 
       <button class="container__donation__infos-btn" (click)="openModal()">
         Concluir doação
-        <img src="/assets/icons/sorriso.png" />
       </button>
     </div>
   </div>

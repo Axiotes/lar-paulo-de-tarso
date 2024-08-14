@@ -15,8 +15,8 @@ import { News } from '../../types/news.type';
 })
 export class NewsComponent {
   public news: News[] = [
-    { url: "/assets/images/news01.png", message: "Um dia especial" },
-    { url: "/assets/images/news02.png", message: "Lista de casamento" },
-    { url: "/assets/images/news03.png", message: "Sábado da alegria" },
+    { url: "/assets/images/news01.png", message: "Um dia especial", readMore: "https://www.instagram.com/p/CxjFLkeuowe/?igsh=MTMxYjBrMmRkZmFx" },
+    { url: "/assets/images/news02.png", message: "Lista de casamento", readMore: "https://www.instagram.com/p/CxEOgOeOFCA/?igsh=MXd1ZndxZG5lNGF2cg==" },
+    { url: "/assets/images/news03.png", message: "Sábado da alegria", readMore: "https://www.instagram.com/p/Cwqje9puz7f/?igsh=MXhvMXRoZDQxaDRieg==" },
   ]
 }
