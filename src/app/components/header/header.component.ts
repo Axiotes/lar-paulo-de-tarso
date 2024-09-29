@@ -7,12 +7,9 @@ import { MatListModule } from '@angular/material/list';
 import {
   RouterOutlet,
   RouterLink,
-  Router,
-  ActivatedRoute,
+  RouterLinkActive,
 } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ConnectComponentsService } from '../../services/connect-components.service';
-import { NavOptions } from '../../types/nav-option.type';
 
 @Component({
   selector: 'app-header',
@@ -26,39 +23,17 @@ import { NavOptions } from '../../types/nav-option.type';
     RouterOutlet,
     RouterLink,
     CommonModule,
+    RouterLinkActive,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent implements OnInit {
-  public navOptions: NavOptions[] = [
-    { route: '/home', title: 'Início', isActive: false },
-    { route: '/about-us', title: 'Sobre', isActive: false },
-    { route: '/news', title: 'Notícias', isActive: false },
-    { route: '/ethical-values', title: 'Valores', isActive: false },
-    { route: '/contact', title: 'Contatos', isActive: false },
+export class HeaderComponent {
+  public navOptions: { route: string; title: string }[] = [
+    { route: '/home', title: 'Início' },
+    { route: '/about-us', title: 'Sobre' },
+    { route: '/news', title: 'Notícias' },
+    { route: '/ethical-values', title: 'Valores' },
+    { route: '/contact', title: 'Contatos' },
   ];
-
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private connectComponents: ConnectComponentsService
-  ) {
-    this.connectComponents
-      .getActiveRoute()
-      .subscribe((route) => this.chanceActiveRoute(route));
-  }
-
-  ngOnInit(): void {
-    this.chanceActiveRoute('/home');
-  }
-
-  public chanceActiveRoute(route: string): void {
-    this.navOptions
-      .filter((option) => option.route === route)
-      .map((option) => (option.isActive = true));
-    this.navOptions
-      .filter((option) => option.route !== route)
-      .map((option) => (option.isActive = false));
-  }
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { SocialMediasComponent } from '../../components/social-medias/social-medias.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { ConnectComponentsService } from '../../services/connect-components.service';
 import { SocialMedias } from '../../types/social-medias.type';
 
 @Component({
@@ -35,13 +34,4 @@ export class ContactComponent {
       socialMedia: "mailto:lar@iclarpaulodetarso.org.br?subject=Assunto do e-mail&body=Corpo do e-mail"
     },
   ];
-
-  constructor(
-    private connectComponents: ConnectComponentsService,
-  ) { }
-
-  public chanceActiveRoute(route: string): void {
-    this.connectComponents.setActiveRoute(route);
-    console.log("Doacoes");
-  }
 }
