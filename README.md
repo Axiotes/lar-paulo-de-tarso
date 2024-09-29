@@ -1,6 +1,5 @@
 # ONG Lar Paulo De Tarso
-
-## Deploy: https://lar-paulo-de-tarso.vercel.app/home
+Este projeto foi desenvolvido como parte de um trabalho de extensão universitária, em que o objetivo era demonstrar como a tecnologia pode apoiar o funcionamento e o crescimento de ONGs. O foco principal foi a criação de um protótipo de site para a ONG Lar Paulo de Tarso, uma instituição que cuida de crianças em situacao de risco. O site foi planejado para ampliar a visibilidade da organização, facilitar as doações e atrair novos patrocinadores.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
