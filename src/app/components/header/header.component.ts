@@ -10,6 +10,7 @@ import {
   RouterLinkActive,
 } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavOptions } from '../../types/nav-option.type';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +30,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  public navOptions: { route: string; title: string }[] = [
+  public navOptions: NavOptions[] = [
     { route: '/home', title: 'Início' },
     { route: '/about-us', title: 'Sobre' },
     { route: '/news', title: 'Notícias' },

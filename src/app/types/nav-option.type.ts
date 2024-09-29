@@ -1,5 +1,4 @@
 export type NavOptions = {
-    route: string,
-    title: string,
-    isActive: boolean
-}
+  route: string;
+  title: string;
+};
