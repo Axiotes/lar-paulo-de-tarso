@@ -1,23 +1,11 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { ConnectComponentsService } from '../../services/connect-components.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    RouterLink
-  ],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  constructor(
-    private connectComponents: ConnectComponentsService,
-    private router: Router,
-  ) { }
-
-  public chanceActiveRoute(route: string): void {
-    this.connectComponents.setActiveRoute(route);
-  }
-}
+export class HomeComponent {}
