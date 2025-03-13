@@ -7,9 +7,8 @@
   margin: 10% 8% 10% 8%;
 
   @media screen and (min-width: 699px) {
-    gap: 60px;
-    margin: 0 8% 8% 8%;
-    height: 90vh;
+    margin: 0 8% 0 8%;
+    height: calc(100vh - 100px);
     justify-content: space-evenly;
   }
 
@@ -20,7 +19,12 @@
     font-size: 2.3em;
     
     @media screen and (min-width: 699px) {
-      margin-top: 3%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      height: 10%;
     }
   }
 
@@ -33,7 +37,7 @@
     height: 100%;
 
     @media screen and (min-width: 699px) {
-      height: 100%;
+      height: 80%;
       flex-direction: row-reverse;
     }
 
