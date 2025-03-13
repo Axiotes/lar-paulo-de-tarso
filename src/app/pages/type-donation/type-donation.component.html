@@ -69,7 +69,12 @@
           *ngIf="typeDonation !== '/money'"
         >
           <p class="text">Marque um horário:</p>
-          <input type="text" [value]="hour | hour" (input)="formatHour($event)" maxlength="5" />
+          <input
+            type="text"
+            [value]="hour | hour"
+            (input)="formatHour($event)"
+            maxlength="5"
+          />
         </div>
       </div>
 
