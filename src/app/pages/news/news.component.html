@@ -1,9 +1,13 @@
 <main class="container">
-    <h1 class="container__title">Últimas <strong>notícias</strong></h1>
+  <h1 class="container__title"><strong>Últimas notícias</strong></h1>
 
-    <div class="container__news">
-        <div *ngFor="let new of news">
-            <app-card-new [url]="new.url" [message]="new.message" [readMore]="new.readMore"></app-card-new>
-        </div>
+  <div class="container__news">
+    <div *ngFor="let new of news">
+      <app-card-new
+        [url]="new.url"
+        [message]="new.message"
+        [readMore]="new.readMore"
+      ></app-card-new>
     </div>
+  </div>
 </main>

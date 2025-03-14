@@ -1,14 +1,18 @@
 <main class="container">
-  <h1 class="container__title">FAÇA SUA <strong>DOAÇÃO</strong></h1>
+  <h1 class="container__title"><strong>Faça sua doação</strong></h1>
 
   <div class="container__donation">
     <div class="container__donation__type">
-      <i-lucide [img]="icon" [size]="45" class="container__donation__type-icon"></i-lucide>
+      <i-lucide
+        [img]="icon"
+        [size]="45"
+        class="container__donation__type-icon"
+      ></i-lucide>
       <h2
         class="container__donation__type-subtitle"
         *ngIf="typeDonation !== '/money'"
       >
-        O que você deseja <strong>doar</strong> {{ textDonation }}?
+        O que você deseja doar {{ textDonation }}?
       </h2>
       <h2
         class="container__donation__type-subtitle"
