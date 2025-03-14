@@ -1,3 +1,5 @@
+@import "../../style/_variables";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@
   }
 
   &__title {
-    color: #67ac51;
+    color: $medium-green;
 
     @media screen and (min-width: 769px) {
       font-size: 2.5em;
@@ -33,7 +35,7 @@
     }
 
     &-subtitle {
-      color: #67ac51;
+      color: $medium-green;
       font-weight: 200;
       font-size: 1.6em;
     }

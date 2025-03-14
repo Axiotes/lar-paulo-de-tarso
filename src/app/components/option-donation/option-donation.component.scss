@@ -1,3 +1,5 @@
+@import "../../style/_variables";
+
 .option {
   display: flex;
   flex-direction: row;
@@ -8,7 +10,7 @@
   &-icon {
     width: 45px;
     height: 45px;
-    color: #67ac51;
+    color: $medium-green;
   }
 
   &-btn {
@@ -17,7 +19,7 @@
     width: 120px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
-    color: #67ac51;
+    color: $medium-green;
     font-weight: 700;
     cursor: pointer;
   }

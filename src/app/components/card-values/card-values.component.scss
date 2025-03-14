@@ -1,3 +1,5 @@
+@import "../../style/_variables";
+
 .card-container {
     max-width: 300px;
     max-height: 300px;
@@ -43,7 +45,7 @@
     }
 
     &__green-background {
-        background-color: #42FF00;
+        background-color: $bright-green;
         position: relative;
         width: 270px;
         height: 270px;

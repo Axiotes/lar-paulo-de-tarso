@@ -1,3 +1,5 @@
+@import "../../style/_variables";
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
   }
 
   a {
-    color: #67ac51;
+    color: $medium-green;
     text-decoration: underline;
   }
 
@@ -28,7 +30,7 @@
     height: 40px;
     width: 60px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-    background-color: #67ac51;
+    background-color: $medium-green;
   }
 
   &__progress-container {
@@ -41,7 +43,7 @@
 
     &__progress-bar {
       height: 100%;
-      background-color: #67ac51;
+      background-color: $medium-green;
       width: 100%;
       transition: width 0.5s ease;
     }

@@ -1,3 +1,5 @@
+@import "../../style/_variables";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@
   gap: 35px;
 
   &__title {
-    color: #67ac51;
+    color: $medium-green;
 
     @media screen and (min-width: 1099px) {
       font-size: 2.5em;
@@ -41,7 +43,7 @@
       &-icon {
         width: 45px;
         height: 45px;
-        color: #67ac51;
+        color: $medium-green;
 
         @media screen and (min-width: 1099px) {
           width: 45px;
@@ -49,7 +51,7 @@
       }
 
       &-subtitle {
-        color: #67ac51;
+        color: $medium-green;
         font-size: 1.2em;
         margin: 0;
 
@@ -149,7 +151,7 @@
         gap: 10px;
         font-size: 14px;
         border-radius: 30px;
-        background-color: #67ac51;
+        background-color: $medium-green;
         color: black;
 
         @media screen and (min-width: 1099px) {
@@ -190,7 +192,7 @@
 }
 
 .text {
-  color: #67ac51;
+  color: $medium-green;
 
   @media screen and (min-width: 1099px) {
     font-size: 1.2em;
