@@ -1,11 +1,11 @@
+@import "../../style/_mixis";
+
 .social-medias {
   width: 40px;
   height: 40px;
   border: solid 2px black;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-flex();
 
   &__icon {
     width: 24px;
