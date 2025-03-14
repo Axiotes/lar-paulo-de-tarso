@@ -27,11 +27,13 @@
         }
 
         &-read-more {
-            color: $neon-green;
+            color: $medium-green;
             font-weight: 400;
             font-size: 17px;
             cursor: pointer;
             padding-bottom: 8px;
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
     }
 }
