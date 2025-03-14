@@ -1,5 +1,7 @@
+import { LucideIconData } from "lucide-angular/icons/types";
+
 export type Donations = {
-  url: string;
+  icon: LucideIconData
   text: string;
   route: string;
 };

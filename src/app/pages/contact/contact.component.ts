@@ -3,6 +3,15 @@ import { SocialMediasComponent } from '../../components/social-medias/social-med
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SocialMedias } from '../../types/social-medias.type';
+import {
+  Facebook,
+  Instagram,
+  LucideAngularModule,
+  Mail,
+  MapPin,
+  Youtube,
+} from 'lucide-angular';
+import { LucideIconData } from 'lucide-angular/icons/types';
 
 @Component({
   selector: 'app-contact',
@@ -10,28 +19,32 @@ import { SocialMedias } from '../../types/social-medias.type';
   imports: [
     SocialMediasComponent,
     CommonModule,
-    RouterLink
+    RouterLink,
+    LucideAngularModule,
   ],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  public mapPin: LucideIconData = MapPin;
+
   public socialMedias: SocialMedias[] = [
     {
-      url: "/assets/icons/youtube.png",
-      socialMedia: "https://www.youtube.com/@iclarpaulodetarso6542"
+      icon: Youtube,
+      socialMedia: 'https://www.youtube.com/@iclarpaulodetarso6542',
     },
     {
-      url: "/assets/icons/instagram.png",
-      socialMedia: "https://www.instagram.com/iclarpaulodetarso/"
+      icon: Instagram,
+      socialMedia: 'https://www.instagram.com/iclarpaulodetarso/',
     },
     {
-      url: "/assets/icons/facebook.png",
-      socialMedia: "https://www.facebook.com/iclarpaulodetarso"
+      icon: Facebook,
+      socialMedia: 'https://www.facebook.com/iclarpaulodetarso',
     },
     {
-      url: "/assets/icons/e-mail.png",
-      socialMedia: "mailto:lar@iclarpaulodetarso.org.br?subject=Assunto do e-mail&body=Corpo do e-mail"
+      icon: Mail,
+      socialMedia:
+        'mailto:lar@iclarpaulodetarso.org.br?subject=Assunto do e-mail&body=Corpo do e-mail',
     },
   ];
 }

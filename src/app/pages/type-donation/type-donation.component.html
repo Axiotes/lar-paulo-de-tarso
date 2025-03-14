@@ -3,7 +3,7 @@
 
   <div class="container__donation">
     <div class="container__donation__type">
-      <img src="{{ url }}" class="container__donation__type-image" />
+      <i-lucide [img]="icon" [size]="45" class="container__donation__type-icon"></i-lucide>
       <h2
         class="container__donation__type-subtitle"
         *ngIf="typeDonation !== '/money'"

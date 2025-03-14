@@ -1,4 +1,6 @@
+import { LucideIconData } from "lucide-angular/icons/types";
+
 export type SocialMedias = {
-  url: string;
+  icon: LucideIconData
   socialMedia: string;
 };
