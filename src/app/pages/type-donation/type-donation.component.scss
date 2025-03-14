@@ -38,18 +38,19 @@
       width: 100%;
       gap: 10px;
 
-      &-image {
-        width: 50px;
+      &-icon {
+        width: 45px;
+        height: 45px;
+        color: #67ac51;
 
         @media screen and (min-width: 1099px) {
-          width: 85px;
+          width: 45px;
         }
       }
 
       &-subtitle {
         color: #67ac51;
         font-size: 1.2em;
-        height: 100%;
         margin: 0;
 
         @media screen and (min-width: 1099px) {
