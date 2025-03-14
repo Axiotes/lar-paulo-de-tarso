@@ -1,3 +1,6 @@
+@import "../../style/_variables";
+@import "../../style/_mixis";
+
 .home {
   height: calc(100vh - 100px);
   width: 100%;
@@ -8,9 +11,7 @@
       center;
     background-size: cover;
     height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    @include display-flex(column, start, end);
 
     &-title {
       position: relative;
@@ -29,8 +30,7 @@
     }
 
     &__btn {
-      display: flex;
-      flex-direction: row;
+      @include display-flex(row, start, start);
       flex-wrap: wrap;
       gap: 20px;
       overflow: visible;
@@ -47,10 +47,8 @@
         border-radius: 30px;
         height: 40px;
         border: none;
-        background-color: #57f421;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background-color: $lime-green;
+        @include display-flex();
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
         font-size: 1em;
         padding: 5px 10px 5px 10px;
@@ -67,9 +65,7 @@
         height: 40px;
         border: none;
         background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-flex();
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
         font-size: 1em;
         padding: 5px 10px 5px 10px;
@@ -86,14 +82,11 @@
   &__text {
     width: 100%;
     height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    @include display-flex(column, start, center);
 
     &-oasis {
       font-size: 1.2em;
-      margin-left: 10%;
+      margin-left: 5%;
 
       @media screen and (min-width: 769px) {
         font-size: 1.5em;

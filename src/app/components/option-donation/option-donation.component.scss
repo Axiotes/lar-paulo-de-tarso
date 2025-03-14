@@ -1,14 +1,13 @@
+@import "../../style/_variables";
+@import "../../style/_mixis";
+
 .option {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  @include display-flex(row, center, center, 10px);
 
   &-icon {
     width: 45px;
     height: 45px;
-    color: #67ac51;
+    color: $medium-green;
   }
 
   &-btn {
@@ -17,7 +16,7 @@
     width: 120px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
-    color: #67ac51;
+    color: $medium-green;
     font-weight: 700;
     cursor: pointer;
   }
