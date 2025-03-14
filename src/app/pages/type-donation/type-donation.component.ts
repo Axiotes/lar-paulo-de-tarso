@@ -11,8 +11,9 @@ import { Donations } from '../../types/donations.type';
 import { CpfPipe } from '../../pipes/cpf.pipe';
 import { ValuePipe } from '../../pipes/value.pipe';
 import { CardNumberPipe } from '../../pipes/card-number.pipe';
-import { DatePipe } from '../../pipes/date.pipe';
 import { HourPipe } from '../../pipes/hour.pipe';
+import { CreditCard, Ellipsis, LucideAngularModule, Salad, Shapes, Shirt } from 'lucide-angular';
+import { LucideIconData } from 'lucide-angular/icons/types';
 
 @Component({
   selector: 'app-type-donation',
@@ -23,19 +24,18 @@ import { HourPipe } from '../../pipes/hour.pipe';
     MatInputModule,
     MatDatepickerModule,
     CommonModule,
-    ModalComponent,
     CpfPipe,
     ValuePipe,
     CardNumberPipe,
-    DatePipe,
     HourPipe,
+    LucideAngularModule
   ],
   templateUrl: './type-donation.component.html',
   styleUrl: './type-donation.component.scss',
 })
 export class TypeDonationComponent implements OnInit {
   public typeDonation: string | null = '';
-  public url: string = '';
+  public icon!: LucideIconData;
   public textDonation: string = '';
   public hour: string = '';
   public value: string = '';
@@ -45,27 +45,27 @@ export class TypeDonationComponent implements OnInit {
 
   public types: Donations[] = [
     {
-      url: '/assets/icons/alimento.png',
+      icon: Salad,
       text: 'de alimentos',
       route: '/foods',
     },
     {
-      url: '/assets/icons/roupas.png',
+      icon: Shirt,
       text: 'de roupas',
       route: '/clothes',
     },
     {
-      url: '/assets/icons/brinquedos.png',
+      icon: Shapes,
       text: 'de brinquedos',
       route: '/toys',
     },
     {
-      url: '/assets/icons/dinheiro.png',
+      icon: CreditCard,
       text: 'Pagamento',
       route: '/money',
     },
     {
-      url: '/assets/icons/outros.png',
+      icon: Ellipsis,
       text: '',
       route: '/others',
     },
@@ -81,7 +81,7 @@ export class TypeDonationComponent implements OnInit {
     this.types
       .filter((type) => this.typeDonation === type.route)
       .map((type) => {
-        this.url = type.url;
+        this.icon = type.icon;
         this.textDonation = type.text;
       });
   }
