@@ -1,5 +1,5 @@
-@import "../../style/_variables";
-@import "../../style/_mixis";
+@use "../../style/_variables" as *;
+@use "../../style/_mixis" as *;
 
 .card-container {
   max-width: 300px;
