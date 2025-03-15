@@ -4,14 +4,13 @@ import { CommonModule } from '@angular/common';
 import { News } from '../../types/news.type';
 
 @Component({
-  selector: 'app-news',
-  standalone: true,
-  imports: [
-    CardNewComponent,
-    CommonModule,
-  ],
-  templateUrl: './news.component.html',
-  styleUrl: './news.component.scss'
+    selector: 'app-news',
+    imports: [
+        CardNewComponent,
+        CommonModule,
+    ],
+    templateUrl: './news.component.html',
+    styleUrl: './news.component.scss'
 })
 export class NewsComponent {
   public news: News[] = [

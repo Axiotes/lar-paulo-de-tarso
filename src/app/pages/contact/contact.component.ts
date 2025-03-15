@@ -14,16 +14,15 @@ import {
 import { LucideIconData } from 'lucide-angular/icons/types';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [
-    SocialMediasComponent,
-    CommonModule,
-    RouterLink,
-    LucideAngularModule,
-  ],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+    selector: 'app-contact',
+    imports: [
+        SocialMediasComponent,
+        CommonModule,
+        RouterLink,
+        LucideAngularModule,
+    ],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   public mapPin: LucideIconData = MapPin;

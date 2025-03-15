@@ -4,11 +4,10 @@ import { LucideAngularModule } from 'lucide-angular';
 import { LucideIconData } from 'lucide-angular/icons/types';
 
 @Component({
-  selector: 'app-option-donation',
-  standalone: true,
-  imports: [LucideAngularModule],
-  templateUrl: './option-donation.component.html',
-  styleUrl: './option-donation.component.scss'
+    selector: 'app-option-donation',
+    imports: [LucideAngularModule],
+    templateUrl: './option-donation.component.html',
+    styleUrl: './option-donation.component.scss'
 })
 export class OptionDonationComponent {
   @Input({ required: true }) public icon!: LucideIconData;

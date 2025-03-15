@@ -16,22 +16,21 @@ import { CreditCard, Ellipsis, LucideAngularModule, Salad, Shapes, Shirt } from 
 import { LucideIconData } from 'lucide-angular/icons/types';
 
 @Component({
-  selector: 'app-type-donation',
-  standalone: true,
-  providers: [provideNativeDateAdapter()],
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    CommonModule,
-    CpfPipe,
-    ValuePipe,
-    CardNumberPipe,
-    HourPipe,
-    LucideAngularModule
-  ],
-  templateUrl: './type-donation.component.html',
-  styleUrl: './type-donation.component.scss',
+    selector: 'app-type-donation',
+    providers: [provideNativeDateAdapter()],
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        MatDatepickerModule,
+        CommonModule,
+        CpfPipe,
+        ValuePipe,
+        CardNumberPipe,
+        HourPipe,
+        LucideAngularModule
+    ],
+    templateUrl: './type-donation.component.html',
+    styleUrl: './type-donation.component.scss'
 })
 export class TypeDonationComponent implements OnInit {
   public typeDonation: string | null = '';
