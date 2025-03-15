@@ -5,11 +5,14 @@
   width: 100%;
   min-height: calc(100vh - 100px);
   @include display-flex(column, center, center);
+  padding-top: 8%;
+  box-sizing: border-box;
 
   @media screen and (min-width: 769px) {
     align-items: center;
     justify-content: center;
     min-height: 88vh;
+    padding: 0;
   }
 
   &__title {
