@@ -18,7 +18,7 @@
       bottom: 15%;
       color: white;
       font-weight: 500;
-      font-size: 2.2em;
+      font-size: 1.6em;
       text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
       overflow: visible;
       padding-left: 5%;
@@ -45,34 +45,40 @@
 
       &-donation {
         border-radius: 30px;
-        height: 40px;
+        height: 30px;
+        width: 100px;
         border: none;
         background-color: $lime-green;
         @include display-flex();
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-        font-size: 1em;
+        font-size: 0.8em;
         padding: 5px 10px 5px 10px;
         color: black;
 
         @media screen and (min-width: 769px) {
-          font-size: 1.2em;
+          width: 140px;
+          height: 40px;
+          font-size: 1em;
           padding: 8px 12px 8px 12px;
         }
       }
 
       &-about {
         border-radius: 30px;
-        height: 40px;
+        height: 30px;
+        width: 115px;
         border: none;
         background-color: white;
         @include display-flex();
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-        font-size: 1em;
+        font-size: 0.8em;
         padding: 5px 10px 5px 10px;
         color: black;
 
         @media screen and (min-width: 769px) {
-          font-size: 1.2em;
+          width: 140px;
+          height: 40px;
+          font-size: 1em;
           padding: 8px 12px 8px 12px;
         }
       }
@@ -82,11 +88,13 @@
   &__text {
     width: 100%;
     height: 30%;
-    @include display-flex(column, start, center);
+    @include display-flex(column, start, center, 10px);
+    box-sizing: border-box;
+    padding: 0 5% 0 5%;
 
     &-oasis {
-      font-size: 1.2em;
-      margin-left: 5%;
+      font-size: 1em;
+      margin: 0;
 
       @media screen and (min-width: 769px) {
         font-size: 1.5em;
@@ -95,10 +103,9 @@
     }
 
     &-paragraph {
-      font-size: 1.2em;
+      font-size: 1em;
       font-weight: 600;
-      margin-left: 5%;
-      margin-right: 5%;
+      margin: 0;
 
       @media screen and (min-width: 769px) {
         font-size: 1.5em;
