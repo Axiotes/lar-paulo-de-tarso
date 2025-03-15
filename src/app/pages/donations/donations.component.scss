@@ -2,16 +2,20 @@
 @use "../../style/_mixis" as *;
 
 .container {
-  @include display-flex(column, center, space-evenly);
+  @include display-flex(column, center, start, 5%);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 100px);
+  padding: 10% 8% 0 8%;
+  box-sizing: border-box;
 
   @media screen and (min-width: 769px) {
+    padding: 0;
     height: calc(100vh - 100px);
   }
 
   &__title {
     color: $medium-green;
+    margin-top: 4%;
 
     @media screen and (min-width: 769px) {
       font-size: 2.5em;
@@ -23,7 +27,9 @@
     border-radius: 30px;
     padding: 20px;
     @include display-flex(column);
-    min-width: 250px;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 20px;
 
     @media screen and (min-width: 769px) {
       min-width: 350px;
