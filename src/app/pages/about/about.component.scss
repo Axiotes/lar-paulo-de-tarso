@@ -6,7 +6,10 @@
   margin: 10% 8% 10% 8%;
 
   @media screen and (min-width: 699px) {
+    gap: 0;
     margin: 0 8% 0 8%;
+    box-sizing: border-box;
+    padding: 4% 0;
     height: calc(100vh - 100px);
     justify-content: space-evenly;
   }
@@ -21,7 +24,7 @@
       width: 100%;
       margin: 0;
       @include display-flex(row, end, center);
-      height: 10%;
+      height: 5%;
     }
   }
 
@@ -30,7 +33,6 @@
     height: 100%;
 
     @media screen and (min-width: 699px) {
-      height: 80%;
       flex-direction: row-reverse;
     }
 
