@@ -4,14 +4,13 @@ import { CardValuesComponent } from '../../components/card-values/card-values.co
 import { EthicalValues } from '../../types/ethical-values.type';
 
 @Component({
-  selector: 'app-ethical-values',
-  standalone: true,
-  imports: [
-    CommonModule,
-    CardValuesComponent,
-  ],
-  templateUrl: './ethical-values.component.html',
-  styleUrl: './ethical-values.component.scss'
+    selector: 'app-ethical-values',
+    imports: [
+        CommonModule,
+        CardValuesComponent,
+    ],
+    templateUrl: './ethical-values.component.html',
+    styleUrl: './ethical-values.component.scss'
 })
 export class EthicalValuesComponent {
   public values: EthicalValues[] = [

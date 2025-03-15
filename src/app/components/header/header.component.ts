@@ -13,21 +13,20 @@ import { CommonModule } from '@angular/common';
 import { NavOptions } from '../../types/nav-option.type';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    RouterOutlet,
-    RouterLink,
-    CommonModule,
-    RouterLinkActive,
-  ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+    selector: 'app-header',
+    imports: [
+        MatIconModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatListModule,
+        RouterOutlet,
+        RouterLink,
+        CommonModule,
+        RouterLinkActive,
+    ],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   public navOptions: NavOptions[] = [

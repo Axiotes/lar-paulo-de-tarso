@@ -4,11 +4,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-modal',
-  standalone: true,
-  imports: [RouterLink, CommonModule],
-  templateUrl: './modal.component.html',
-  styleUrl: './modal.component.scss',
+    selector: 'app-modal',
+    imports: [RouterLink, CommonModule],
+    templateUrl: './modal.component.html',
+    styleUrl: './modal.component.scss'
 })
 export class ModalComponent implements OnInit, OnDestroy {
   public progress: number = 100;

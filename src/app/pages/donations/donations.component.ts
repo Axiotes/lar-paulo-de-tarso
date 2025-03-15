@@ -5,11 +5,10 @@ import { Donations } from '../../types/donations.type';
 import { CreditCard, Ellipsis, Salad, Shapes, Shirt } from 'lucide-angular';
 
 @Component({
-  selector: 'app-donations',
-  standalone: true,
-  imports: [CommonModule, OptionDonationComponent],
-  templateUrl: './donations.component.html',
-  styleUrl: './donations.component.scss',
+    selector: 'app-donations',
+    imports: [CommonModule, OptionDonationComponent],
+    templateUrl: './donations.component.html',
+    styleUrl: './donations.component.scss'
 })
 export class DonationsComponent {
   public optionsDonations: Donations[] = [
